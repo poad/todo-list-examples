@@ -14,7 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "@solidjs/testing-library": "^0.8.8",
-    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/jest-dom": "^6.4.6",
     "autoprefixer": "10.4.19",
     "eslint-plugin-solid": "^0.14.0",
     "jsdom": "^24.1.0",
