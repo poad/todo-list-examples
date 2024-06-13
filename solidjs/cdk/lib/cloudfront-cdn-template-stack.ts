@@ -80,20 +80,6 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       ],
       httpVersion: cloudfront.HttpVersion.HTTP2_AND_3,
     });
-    s3bucket.addToResourcePolicy(
-      new iam.PolicyStatement({
-        sid: 'AllowCloudFrontServicePrincipalReadOnly',
-        effect: iam.Effect.ALLOW,
-        principals: [new iam.ServicePrincipal('cloudfront.amazonaws.com')],
-        actions: ['s3:GetObject'],
-        resources: [`${s3bucket.bucketArn}/*`],
-        conditions: {
-          StringEquals: {
-            'AWS:SourceArn': `arn:aws:cloudfront::${this.account}:distribution/${cf.distributionId}`,
-          },
-        },
-      }),
-    );
 
 		new deployment.BucketDeployment(this, "DeployWebsite", {
 			sources: [deployment.Source.asset(`${process.cwd()}/../dist`)],
