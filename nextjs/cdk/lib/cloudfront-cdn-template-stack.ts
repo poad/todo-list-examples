@@ -38,7 +38,13 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       removalPolicy: cdk.RemovalPolicy.DESTROY,
       autoDeleteObjects: true,
       accessControl: s3.BucketAccessControl.PRIVATE,
-      publicReadAccess: false,
+      publicReadAccess: true,
+      blockPublicAccess: {
+        blockPublicAcls: false,
+        blockPublicPolicy: false,
+        ignorePublicAcls: false,
+        restrictPublicBuckets: false,
+      },
       websiteIndexDocument: 'index.html',
     });
 
