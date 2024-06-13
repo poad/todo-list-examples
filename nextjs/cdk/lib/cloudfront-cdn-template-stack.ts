@@ -2,6 +2,7 @@ import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
+import * as origin from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as deployment from "aws-cdk-lib/aws-s3-deployment";
 
@@ -57,27 +58,15 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
 			},
 		});
 
-    const cf = new cloudfront.CloudFrontWebDistribution(this, 'CloudFront', {
+    const cf = new cloudfront.Distribution(this, 'CloudFront', {
       comment,
-      originConfigs: [
-        {
-          s3OriginSource: {
-            s3BucketSource: s3bucket,
-          },
-          behaviors: [
-            {
-              isDefaultBehavior: true,
-              compress: true,
-              cachedMethods: cloudfront.CloudFrontAllowedCachedMethods.GET_HEAD,
-              viewerProtocolPolicy:
-                cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
-              minTtl: cdk.Duration.seconds(0),
-              maxTtl: cdk.Duration.seconds(86400),
-              defaultTtl: cdk.Duration.seconds(3600),
-            },
-          ],
-        },
-      ],
+      defaultRootObject: 'index.html',
+      defaultBehavior: {
+        origin: new origin.S3Origin(s3bucket, {originId: 'origin1'}),
+        cachePolicy: cloudfront.CachePolicy.CACHING_DISABLED,
+        viewerProtocolPolicy:
+        cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+      },
       httpVersion: cloudfront.HttpVersion.HTTP2_AND_3,
     });
 
