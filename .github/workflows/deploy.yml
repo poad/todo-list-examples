@@ -25,8 +25,8 @@ jobs:
     strategy:
       matrix:
         target: [
-          ./nextjs/cdk,
-          ./solidjs/cdk
+          ./nextjs,
+          ./solidjs
         ]
 
     runs-on: ubuntu-latest
@@ -54,6 +54,10 @@ jobs:
             args: [--no-frozen-lockfile]
           - args: [--global, aws-cdk]
 
-    - name: Deploy
+    - name: Build
       working-directory: ${{ matrix.target }}
+      run: pnpm build
+
+    - name: Deploy
+      working-directory: ${{ matrix.target }}/cdk
       run: cdk deploy
