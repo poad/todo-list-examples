@@ -56,10 +56,16 @@ importers:
       react:
         specifier: ^18.3.1
         version: 18.3.1
+      react-device-detect:
+        specifier: ^2.2.3
+        version: 2.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-dnd:
         specifier: ^16.0.1
         version: 16.0.1(@types/node@20.14.2)(@types/react@18.3.3)(react@18.3.1)
       react-dnd-html5-backend:
+        specifier: ^16.0.1
+        version: 16.0.1
+      react-dnd-touch-backend:
         specifier: ^16.0.1
         version: 16.0.1
     devDependencies:
@@ -112,8 +118,8 @@ importers:
   nextjs/cdk:
     dependencies:
       aws-cdk-lib:
-        specifier: ^2.145.0
-        version: 2.145.0(constructs@10.3.0)
+        specifier: ^2.146.0
+        version: 2.146.0(constructs@10.3.0)
       constructs:
         specifier: ^10.3.0
         version: 10.3.0
@@ -137,8 +143,8 @@ importers:
         specifier: ^20.14.2
         version: 20.14.2
       aws-cdk:
-        specifier: ^2.145.0
-        version: 2.145.0
+        specifier: ^2.146.0
+        version: 2.146.0
       eslint:
         specifier: ^9.4.0
         version: 9.4.0
@@ -219,8 +225,8 @@ importers:
   solidjs/cdk:
     dependencies:
       aws-cdk-lib:
-        specifier: ^2.145.0
-        version: 2.145.0(constructs@10.3.0)
+        specifier: ^2.146.0
+        version: 2.146.0(constructs@10.3.0)
       constructs:
         specifier: ^10.3.0
         version: 10.3.0
@@ -244,8 +250,8 @@ importers:
         specifier: ^20.14.2
         version: 20.14.2
       aws-cdk:
-        specifier: ^2.145.0
-        version: 2.145.0
+        specifier: ^2.146.0
+        version: 2.146.0
       eslint:
         specifier: ^9.4.0
         version: 9.4.0
@@ -1275,8 +1281,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  aws-cdk-lib@2.145.0:
-    resolution: {integrity: sha512-0RCKdojCtF74rI2gGi9KUFVUKykTIMEs3ANjruIjxEz6d2cAsy9c2k+nCCSMdqhKZ9aPJgmBFewiw03Z8NtPig==}
+  aws-cdk-lib@2.146.0:
+    resolution: {integrity: sha512-W3F2zH+P7hUxmu2dlEKJBBi6Twc4//NsJJW00h2LN0dKU+2302QY8jR+P7jgEYzZ7U50phtH4zO6BPmJrhLVEg==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -1293,8 +1299,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.145.0:
-    resolution: {integrity: sha512-Jdw7nbrXiihYM/jReXK0/i8a+W/o+fLcn1f8Yzvns1jP58KBGQygqyiv5Dm+uqzS3D8/ZZnfPu3ph6aOVLPNSA==}
+  aws-cdk@2.146.0:
+    resolution: {integrity: sha512-uLotAflIqQn8rskLC1r2NGNMaTwDgW8Vq016QiACmatIcp2n/hfNlwazg+hRlSzq2FwGda6Qht2aOlsGm0QcBw==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
 
@@ -2734,8 +2740,17 @@ packages:
   randomfill@1.0.4:
     resolution: {integrity: sha512-87lcbR8+MhcWcUiQ+9e+Rwx8MyR2P7qnt15ynUlbm3TU/fjbgz4GsvfSUDTemtCCtVCqb4ZcEFlyPNTh9bBTLw==}
 
+  react-device-detect@2.2.3:
+    resolution: {integrity: sha512-buYY3qrCnQVlIFHrC5UcUoAj7iANs/+srdkwsnNjI7anr3Tt7UY6MqNxtMLlr0tMBied0O49UZVK8XKs3ZIiPw==}
+    peerDependencies:
+      react: '>= 0.14.0'
+      react-dom: '>= 0.14.0'
+
   react-dnd-html5-backend@16.0.1:
     resolution: {integrity: sha512-Wu3dw5aDJmOGw8WjH1I1/yTH+vlXEL4vmjk5p+MHxP8HuHJS1lAGeIdG/hze1AvNeXWo/JgULV87LyQOr+r5jw==}
+
+  react-dnd-touch-backend@16.0.1:
+    resolution: {integrity: sha512-NonoCABzzjyWGZuDxSG77dbgMZ2Wad7eQiCd/ECtsR2/NBLTjGksPUx9UPezZ1nQ/L7iD130Tz3RUshL/ClKLA==}
 
   react-dnd@16.0.1:
     resolution: {integrity: sha512-QeoM/i73HHu2XF9aKksIUuamHPDvRglEwdHL4jsp784BgUuWcg6mzfxT0QDdQz8Wj0qyRKx2eMg8iZtWvU4E2Q==}
@@ -3200,6 +3215,9 @@ packages:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  ua-parser-js@1.0.38:
+    resolution: {integrity: sha512-Aq5ppTOfvrCMgAPneW1HfWj66Xi7XL+/mIy996R1/CLS/rcyJQm6QZdsKrUeivDFQ+Oc9Wyuwor8Ze8peEoUoQ==}
 
   ufo@1.5.3:
     resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
@@ -4487,14 +4505,14 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  aws-cdk-lib@2.145.0(constructs@10.3.0):
+  aws-cdk-lib@2.146.0(constructs@10.3.0):
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.202
       '@aws-cdk/asset-kubectl-v20': 2.1.2
       '@aws-cdk/asset-node-proxy-agent-v6': 2.0.3
       constructs: 10.3.0
 
-  aws-cdk@2.145.0:
+  aws-cdk@2.146.0:
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -6242,8 +6260,19 @@ snapshots:
       randombytes: 2.1.0
       safe-buffer: 5.2.1
 
+  react-device-detect@2.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      ua-parser-js: 1.0.38
+
   react-dnd-html5-backend@16.0.1:
     dependencies:
+      dnd-core: 16.0.1
+
+  react-dnd-touch-backend@16.0.1:
+    dependencies:
+      '@react-dnd/invariant': 4.0.2
       dnd-core: 16.0.1
 
   react-dnd@16.0.1(@types/node@20.14.2)(@types/react@18.3.3)(react@18.3.1):
@@ -6786,6 +6815,8 @@ snapshots:
       - supports-color
 
   typescript@5.4.5: {}
+
+  ua-parser-js@1.0.38: {}
 
   ufo@1.5.3: {}
 
