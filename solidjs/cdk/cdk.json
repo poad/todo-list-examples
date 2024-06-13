@@ -22,7 +22,10 @@
   "context": {
     "default": {
       "stackName": "todo-list-examples-solidjs",
-      "bucketName": "todo-list-examples-solidjs"
+      "bucketName": "todo-list-examples-solidjs",
+      "cloudfront": {
+        "comment": "for ToDo List example by Solid.js"
+      }
     }
   }
 }

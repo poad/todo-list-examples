@@ -22,7 +22,10 @@
   "context": {
     "default": {
       "stackName": "todo-list-examples-nextjs",
-      "bucketName": "todo-list-examples-nextjs"
+      "bucketName": "todo-list-examples-nextjs",
+      "cloudfront": {
+        "comment": "for ToDo List example by Next.js"
+      }
     }
   }
 }
