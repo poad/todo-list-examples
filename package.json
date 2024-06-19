@@ -8,10 +8,10 @@
     "lint": "pnpm -r --if-present --parallel /^.*-check$/"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^2.2.1",
-    "@stylistic/eslint-plugin-js": "^2.2.1",
-    "@stylistic/eslint-plugin-plus": "^2.2.1",
-    "@stylistic/eslint-plugin-ts": "^2.2.1",
+    "@stylistic/eslint-plugin": "^2.2.2",
+    "@stylistic/eslint-plugin-js": "^2.2.2",
+    "@stylistic/eslint-plugin-plus": "^2.2.2",
+    "@stylistic/eslint-plugin-ts": "^2.2.2",
     "eslint": "^9.5.0",
     "eslint-plugin-import": "^2.29.1",
     "typescript": "^5.4.5",
