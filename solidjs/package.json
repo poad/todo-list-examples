@@ -16,7 +16,7 @@
     "@solidjs/testing-library": "^0.8.8",
     "@testing-library/jest-dom": "^6.4.6",
     "autoprefixer": "10.4.19",
-    "eslint-plugin-solid": "^0.14.0",
+    "eslint-plugin-solid": "^0.14.1",
     "jsdom": "^24.1.0",
     "postcss": "8.4.38",
     "solid-devtools": "^0.30.1",
