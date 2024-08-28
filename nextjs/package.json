@@ -11,7 +11,7 @@
   "dependencies": {
     "dnd-core": "^16.0.1",
     "immutability-helper": "^3.1.1",
-    "next": "^14.2.6",
+    "next": "^14.2.7",
     "react": "^18.3.1",
     "react-device-detect": "^2.2.3",
     "react-dnd": "^16.0.1",
@@ -19,16 +19,16 @@
     "react-dnd-touch-backend": "^16.0.1"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.2.6",
+    "@next/eslint-plugin-next": "^14.2.7",
     "@stylistic/eslint-plugin": "^2.6.4",
     "@stylistic/eslint-plugin-js": "^2.6.4",
     "@stylistic/eslint-plugin-plus": "^2.6.4",
     "@stylistic/eslint-plugin-ts": "^2.6.4",
-    "@types/node": "^22.5.0",
+    "@types/node": "^22.5.1",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
     "eslint": "^9.9.1",
-    "eslint-config-next": "^14.2.6",
+    "eslint-config-next": "^14.2.7",
     "postcss": "^8.4.41",
     "react-icons": "^5.3.0",
     "tailwindcss": "^3.4.10",
