@@ -2,10 +2,10 @@ import { useCallback } from 'react';
 import { DraggableItem } from './DraggableItem';
 import { Item } from '@/feature/list-item/type';
 
-type ItemViewParams<T> = {
+interface ItemViewParams<T> {
   item: Item<T>;
   index: number;
-};
+}
 
 export function DraggableList<T>({
   items,

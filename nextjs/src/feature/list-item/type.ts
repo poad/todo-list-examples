@@ -1,9 +1,9 @@
-export type ListItemState = {
+export interface ListItemState {
   name: string;
   label: string;
   checked: boolean,
 
-};
+}
 
 export interface Item<T> {
   id: string;

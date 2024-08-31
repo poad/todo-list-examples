@@ -27,10 +27,13 @@ export default tseslint.config(
     files: ['src/**/*.{jsx,ts,tsx}'],
   },
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}'],
     plugins: {
+      '@stylistic': stylistic,
+      '@stylistic/ts': stylisticTs,
+      '@stylistic/jsx': stylisticJsx,
       '@next/next': nextPlugin,
     },
     // @ts-ignore
@@ -40,27 +43,14 @@ export default tseslint.config(
       '@next/next/no-duplicate-head': 'off',
       '@next/next/no-img-element': 'error',
       '@next/next/no-page-custom-font': 'off',
-    },
-  },
-  {
-    files: ['src/**/*.{js,jsx,ts,tsx}'],
-    plugins: {
-      '@stylistic': stylistic,
-      '@stylistic/ts': stylisticTs,
-      '@stylistic/jsx': stylisticJsx,
-    },
-    rules: {
+      'react/display-name': 'off',
       '@stylistic/semi': 'error',
       '@stylistic/ts/indent': ['error', 2],
       '@stylistic/jsx/jsx-indent': ['error', 2],
       'comma-dangle': ['error', 'always-multiline'],
       'arrow-parens': ['error', 'always'],
       'quotes': ['error', 'single'],
-    },
-  },
-  {
-    rules: {
-      'react/display-name': 'off',
+      'semi': ['error', 'always'],
     },
   },
 );

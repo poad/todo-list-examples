@@ -1,4 +1,4 @@
-import { ListItemState } from "../type";
+import { ListItemState } from '../type';
 
 type ListItemProps = ListItemState & {
   id: string;
