@@ -68,7 +68,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       comment,
       defaultRootObject: 'index.html',
       defaultBehavior: {
-        origin: new origin.S3Origin(s3bucket, {originId: 'origin1'}),
+        origin: new origin.S3StaticWebsiteOrigin(s3bucket, {originId: 'origin1'}),
         cachePolicy: cloudfront.CachePolicy.CACHING_DISABLED,
         viewerProtocolPolicy:
         cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
