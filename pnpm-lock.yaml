@@ -28,7 +28,7 @@ importers:
         version: 9.10.0(jiti@1.21.6)
       eslint-plugin-import:
         specifier: ^2.30.0
-        version: 2.30.0(eslint@9.10.0(jiti@1.21.6))
+        version: 2.30.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
@@ -156,7 +156,7 @@ importers:
         version: 9.10.0(jiti@1.21.6)
       eslint-plugin-import:
         specifier: ^2.30.0
-        version: 2.30.0(eslint@9.10.0(jiti@1.21.6))
+        version: 2.30.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.5.4)(typescript@5.6.2)
@@ -263,7 +263,7 @@ importers:
         version: 9.10.0(jiti@1.21.6)
       eslint-plugin-import:
         specifier: ^2.30.0
-        version: 2.30.0(eslint@9.10.0(jiti@1.21.6))
+        version: 2.30.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.5.4)(typescript@5.6.2)
@@ -1608,8 +1608,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.5.18:
-    resolution: {integrity: sha512-1OfuVACu+zKlmjsNdcJuVQuVE61sZOLbNM4JAQ1Rvh6EOj0/EUKhMJjRH73InPlXSh8HIJk1cVZ8pyOV/FMdUQ==}
+  electron-to-chromium@1.5.19:
+    resolution: {integrity: sha512-kpLJJi3zxTR1U828P+LIUDZ5ohixyo68/IcYOHLqnbTPr/wdgn4i1ECvmALN9E16JPA6cvCG5UG79gVwVdEK5w==}
 
   elliptic@6.5.7:
     resolution: {integrity: sha512-ESVCtTwiA+XhY3wyh24QqRGBoP3rEdDUl3EDUUo9tft074fi19IrdpH7hLCMMP3CIj7jb3W96rn8lt/BqIlt5Q==}
@@ -4521,7 +4521,7 @@ snapshots:
   browserslist@4.23.3:
     dependencies:
       caniuse-lite: 1.0.30001660
-      electron-to-chromium: 1.5.18
+      electron-to-chromium: 1.5.19
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.23.3)
 
@@ -4800,7 +4800,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.18: {}
+  electron-to-chromium@1.5.19: {}
 
   elliptic@6.5.7:
     dependencies:
@@ -4968,7 +4968,7 @@ snapshots:
       eslint: 9.10.0(jiti@1.21.6)
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.2.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0)(eslint@9.10.0(jiti@1.21.6))
-      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))
+      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.2.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))
       eslint-plugin-jsx-a11y: 6.10.0(eslint@9.10.0(jiti@1.21.6))
       eslint-plugin-react: 7.35.2(eslint@9.10.0(jiti@1.21.6))
       eslint-plugin-react-hooks: 4.6.2(eslint@9.10.0(jiti@1.21.6))
@@ -4999,7 +4999,7 @@ snapshots:
       is-bun-module: 1.2.1
       is-glob: 4.0.3
     optionalDependencies:
-      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))
+      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.2.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6))
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-node
@@ -5017,16 +5017,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.11.0(eslint-import-resolver-node@0.3.9)(eslint@9.10.0(jiti@1.21.6)):
+  eslint-module-utils@2.11.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint@9.10.0(jiti@1.21.6)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
+      '@typescript-eslint/parser': 8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
       eslint: 9.10.0(jiti@1.21.6)
       eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.30.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6)):
+  eslint-plugin-import@2.30.0(@typescript-eslint/parser@7.2.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6)):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -5048,13 +5049,13 @@ snapshots:
       semver: 6.3.1
       tsconfig-paths: 3.15.0
     optionalDependencies:
-      '@typescript-eslint/parser': 8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
+      '@typescript-eslint/parser': 7.2.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-import@2.30.0(eslint@9.10.0(jiti@1.21.6)):
+  eslint-plugin-import@2.30.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint@9.10.0(jiti@1.21.6)):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -5065,7 +5066,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.10.0(jiti@1.21.6)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.11.0(eslint-import-resolver-node@0.3.9)(eslint@9.10.0(jiti@1.21.6))
+      eslint-module-utils: 2.11.0(@typescript-eslint/parser@8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint@9.10.0(jiti@1.21.6))
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -5075,6 +5076,8 @@ snapshots:
       object.values: 1.2.0
       semver: 6.3.1
       tsconfig-paths: 3.15.0
+    optionalDependencies:
+      '@typescript-eslint/parser': 8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
