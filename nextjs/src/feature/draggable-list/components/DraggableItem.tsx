@@ -33,6 +33,7 @@ export function DraggableItem({
   const ref = useRef<HTMLDivElement>(null);
   const [{ handlerId }, drop] = useDrop<
     DragItem,
+    // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
     void,
     { handlerId: Identifier | null }
   >({
