@@ -8,6 +8,9 @@ import solid from 'eslint-plugin-solid';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
   {
     ignores: [
       '**/*.d.ts',
@@ -22,14 +25,7 @@ export default tseslint.config(
       '../nextjs/cdk',
       'dist',
     ],
-  },
-  {
     files: ['src/**/*.{jsx,ts,tsx}'],
-  },
-  eslint.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
-  {
     plugins: {
       solid,
       '@stylistic': stylistic,

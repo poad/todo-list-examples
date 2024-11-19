@@ -9,6 +9,9 @@ import nextPlugin from '@next/eslint-plugin-next';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
   {
     ignores: [
       '**/*.d.ts',
@@ -22,14 +25,7 @@ export default tseslint.config(
       '../solidjs',
       '../solidjs/cdk',
     ],
-  },
-  {
     files: ['src/**/*.{jsx,ts,tsx}'],
-  },
-  eslint.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
-  {
     plugins: {
       '@stylistic': stylistic,
       '@stylistic/ts': stylisticTs,
