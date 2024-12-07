@@ -4,7 +4,6 @@ import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 import stylisticJsx from '@stylistic/eslint-plugin-jsx';
-// @ts-ignore
 import nextPlugin from '@next/eslint-plugin-next';
 import tseslint from 'typescript-eslint';
 
@@ -18,8 +17,8 @@ export default tseslint.config(
       '*.{js,jsx,cjs,mjs}',
       '**/*.css',
       'node_modules/**/*',
-      '.next',
-      'out',
+      '**/.next',
+      '**/out',
       '.storybook',
       'cdk',
       '../solidjs',
@@ -32,7 +31,7 @@ export default tseslint.config(
       '@stylistic/jsx': stylisticJsx,
       '@next/next': nextPlugin,
     },
-    // @ts-ignore
+    // @ts-expect-error ignore errors
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
@@ -45,8 +44,8 @@ export default tseslint.config(
       '@stylistic/jsx/jsx-indent': ['error', 2],
       'comma-dangle': ['error', 'always-multiline'],
       'arrow-parens': ['error', 'always'],
-      'quotes': ['error', 'single'],
-      'semi': ['error', 'always'],
+      quotes: ['error', 'single'],
+      semi: ['error', 'always'],
     },
   },
 );
