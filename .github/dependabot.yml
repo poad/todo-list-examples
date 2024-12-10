@@ -12,7 +12,12 @@ updates:
       - poad
 
   - package-ecosystem: npm
-    directory: '/'
+    directories:
+      - '/'
+      - '/nextjs/'
+      - '/nextjs/cdk/'
+      - '/solidjs/'
+      - '/solidjs/cdk/'
     schedule:
       interval: daily
       timezone: Asia/Tokyo
@@ -22,67 +27,6 @@ updates:
     assignees:
       - poad
     groups:
-      cdk:
-        patterns:
-          - '*'
-
-  - package-ecosystem: npm
-    directory: '/nextjs/'
-    schedule:
-      interval: daily
-      timezone: Asia/Tokyo
-    allow:
-      - dependency-type: all
-    rebase-strategy: auto
-    assignees:
-      - poad
-    groups:
-      nextjs:
-        patterns:
-          - '*'
-
-  - package-ecosystem: npm
-    directory: '/nextjs/cdk/'
-    schedule:
-      interval: daily
-      timezone: Asia/Tokyo
-    allow:
-      - dependency-type: all
-    rebase-strategy: auto
-    assignees:
-      - poad
-    groups:
-      nextjs-cdk:
-        patterns:
-          - '*'
-
-  - package-ecosystem: npm
-    directory: '/solidjs/'
-    schedule:
-      interval: daily
-      timezone: Asia/Tokyo
-    allow:
-      - dependency-type: all
-    rebase-strategy: auto
-    assignees:
-      - poad
-    groups:
-      solidjs:
-        patterns:
-          - '*'
-
-
-  - package-ecosystem: npm
-    directory: '/solidjs/cdk/'
-    schedule:
-      interval: daily
-      timezone: Asia/Tokyo
-    allow:
-      - dependency-type: all
-    rebase-strategy: auto
-    assignees:
-      - poad
-    groups:
-      solidjs-cdk:
+      npm:
         patterns:
           - '*'
