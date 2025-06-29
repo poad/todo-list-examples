@@ -2,12 +2,8 @@
 
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
-import stylisticJsx from '@stylistic/eslint-plugin-jsx';
 import tseslint from 'typescript-eslint';
 export default tseslint.config(
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
   {
     ignores: [
       '**/*.d.ts',
@@ -22,12 +18,14 @@ export default tseslint.config(
       'nextjs',
     ],
   },
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     files: ['src/*.ts', 'src/**/*.ts'],
     plugins: {
       '@stylistic': stylistic,
-      '@stylistic/ts': stylisticTs,
-      '@stylistic/jsx': stylisticJsx,
+      '@stylistic/ts': stylistic,
+      '@stylistic/jsx': stylistic,
     },
     rules: {
       '@stylistic/semi': 'error',

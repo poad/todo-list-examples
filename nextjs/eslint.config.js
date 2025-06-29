@@ -2,15 +2,10 @@
 
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
-import stylisticJsx from '@stylistic/eslint-plugin-jsx';
 import nextPlugin from '@next/eslint-plugin-next';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  eslint.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
   {
     ignores: [
       '**/*.d.ts',
@@ -24,11 +19,16 @@ export default tseslint.config(
       '../solidjs',
       '../solidjs/cdk',
     ],
+  },
+  eslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
+  {
     files: ['src/**/*.{jsx,ts,tsx}'],
     plugins: {
       '@stylistic': stylistic,
-      '@stylistic/ts': stylisticTs,
-      '@stylistic/jsx': stylisticJsx,
+      '@stylistic/ts': stylistic,
+      '@stylistic/jsx': stylistic,
       '@next/next': nextPlugin,
     },
     // @ts-expect-error ignore errors
