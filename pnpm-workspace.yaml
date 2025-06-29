@@ -1,5 +1,8 @@
 packages:
-  - './nextjs'
-  - './nextjs/cdk'
-  - './solidjs'
-  - './solidjs/cdk'
+  - ./nextjs
+  - ./nextjs/cdk
+  - ./solidjs
+  - ./solidjs/cdk
+
+onlyBuiltDependencies:
+  - unrs-resolver
