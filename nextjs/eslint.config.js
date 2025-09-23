@@ -1,11 +1,12 @@
 // @ts-check
 
+import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import nextPlugin from '@next/eslint-plugin-next';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default defineConfig(
   {
     ignores: [
       '**/*.d.ts',
@@ -27,8 +28,7 @@ export default tseslint.config(
     files: ['src/**/*.{jsx,ts,tsx}'],
     plugins: {
       '@stylistic': stylistic,
-      '@stylistic/ts': stylistic,
-      '@stylistic/jsx': stylistic,
+      // @ts-expect-error ignore errors
       '@next/next': nextPlugin,
     },
     // @ts-expect-error ignore errors
@@ -39,13 +39,11 @@ export default tseslint.config(
       '@next/next/no-img-element': 'error',
       '@next/next/no-page-custom-font': 'off',
       'react/display-name': 'off',
-      '@stylistic/semi': 'error',
-      '@stylistic/ts/indent': ['error', 2],
-      '@stylistic/jsx/jsx-indent': ['error', 2],
-      'comma-dangle': ['error', 'always-multiline'],
-      'arrow-parens': ['error', 'always'],
-      quotes: ['error', 'single'],
-      semi: ['error', 'always'],
+      '@stylistic/semi': ['error', 'always'],
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
+      '@stylistic/arrow-parens': ['error', 'always'],
+      '@stylistic/quotes': ['error', 'single'],
     },
   },
 );

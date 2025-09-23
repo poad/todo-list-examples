@@ -1,16 +1,12 @@
 // @ts-check
 
+import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
-import stylisticJsx from '@stylistic/eslint-plugin-jsx';
-import solid from 'eslint-plugin-solid';
+import solid from "eslint-plugin-solid/configs/typescript";
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
-  eslint.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
+export default defineConfig(
   {
     ignores: [
       '**/*.d.ts',
@@ -25,12 +21,15 @@ export default tseslint.config(
       '../nextjs/cdk',
       'dist',
     ],
+  },
+  eslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
+  {
     files: ['src/**/*.{jsx,ts,tsx}'],
+    ...solid,
     plugins: {
-      solid,
       '@stylistic': stylistic,
-      '@stylistic/ts': stylisticTs,
-      '@stylistic/jsx': stylisticJsx,
     },
     languageOptions: {
       globals: {
@@ -45,13 +44,11 @@ export default tseslint.config(
     },
     rules: {
       'react/display-name': 'off',
-      '@stylistic/semi': 'error',
+      '@stylistic/semi': ['error', 'always'],
       '@stylistic/ts/indent': ['error', 2],
-      '@stylistic/jsx/jsx-indent': ['error', 2],
-      'comma-dangle': ['error', 'always-multiline'],
-      'arrow-parens': ['error', 'always'],
-      quotes: ['error', 'single'],
-      semi: ['error', 'always'],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
+      '@stylistic/arrow-parens': ['error', 'always'],
+      '@stylistic/quotes': ['error', 'single'],
     },
   },
 );
