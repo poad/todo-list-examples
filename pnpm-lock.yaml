@@ -2778,9 +2778,9 @@ packages:
     resolution: {integrity: sha512-//nshmD55c46FuFw26xV/xFAaB5HF9Xdap7HJBBnrKdAd6/GxDBaNA1870O79+9ueg61cZLSVc+OaFlfmObYVQ==}
     engines: {node: '>= 14.16'}
 
-  pbkdf2@3.1.4:
-    resolution: {integrity: sha512-0yPXNT01PxSUdkIxL85Fd+yPdeCcvGwFPAAHbR3Z2ukMERcRrJFfLUKK3oglbQ9eUPeX6qDY3QiELqiDarZYUQ==}
-    engines: {node: '>=0.12'}
+  pbkdf2@3.1.5:
+    resolution: {integrity: sha512-Q3CG/cYvCO1ye4QKkuH7EXxs3VC/rI1/trd+qX2+PolbaKG0H+bgcZzrTt96mMyRtejk+JMCiLUn3y29W8qmFQ==}
+    engines: {node: '>= 0.10'}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -5083,7 +5083,7 @@ snapshots:
       diffie-hellman: 5.0.3
       hash-base: 3.0.5
       inherits: 2.0.4
-      pbkdf2: 3.1.4
+      pbkdf2: 3.1.5
       public-encrypt: 4.0.3
       randombytes: 2.1.0
       randomfill: 1.0.4
@@ -6305,7 +6305,7 @@ snapshots:
       asn1.js: 4.10.1
       browserify-aes: 1.2.0
       evp_bytestokey: 1.0.3
-      pbkdf2: 3.1.4
+      pbkdf2: 3.1.5
       safe-buffer: 5.2.1
 
   parse5@7.3.0:
@@ -6329,7 +6329,7 @@ snapshots:
 
   pathval@2.0.1: {}
 
-  pbkdf2@3.1.4:
+  pbkdf2@3.1.5:
     dependencies:
       create-hash: 1.2.0
       create-hmac: 1.1.7
