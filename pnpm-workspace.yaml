@@ -8,5 +8,5 @@ onlyBuiltDependencies:
   - unrs-resolver
 
 overrides:
-  '@eslint/plugin-kit@<0.3.3': '>=0.3.3'
-  esbuild@<=0.24.2: '>=0.25.0'
+  "@types/react": "19.2.2"
+  "@types/react-dom": "19.2.2"
