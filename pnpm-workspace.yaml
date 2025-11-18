@@ -8,5 +8,6 @@ onlyBuiltDependencies:
   - unrs-resolver
 
 overrides:
-  "@types/react": "19.2.2"
-  "@types/react-dom": "19.2.2"
+  '@types/react': 19.2.2
+  '@types/react-dom': 19.2.2
+  glob@>=10.3.7 <=11.0.3: '>=11.1.0'
