@@ -34,16 +34,16 @@ const Sortable = (props: {
       }}
     >
       <div class='border border-dotted rounded border-slate-500 w-24 mx-auto hover:cursor-grab'>
-      <label class="p-1 w-20 hover:cursor-grab">
-        <input
-          type="checkbox"
-          checked={props.checked}
-          value={props.value}
-          onChange={(event) => props.onChecked?.(event.target.checked)}
-          class="mx-2"
-         />
-        {props.label}
-      </label>
+        <label class="p-1 w-20 hover:cursor-grab">
+          <input
+            type="checkbox"
+            checked={props.checked}
+            value={props.value}
+            onChange={(event) => props.onChecked?.(event.target.checked)}
+            class="mx-2"
+          />
+          {props.label}
+        </label>
       </div>
     </div>
   );

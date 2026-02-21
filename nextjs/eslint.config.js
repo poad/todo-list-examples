@@ -28,10 +28,8 @@ export default defineConfig(
     files: ['src/**/*.{jsx,ts,tsx}'],
     plugins: {
       '@stylistic': stylistic,
-      // @ts-expect-error ignore errors
       '@next/next': nextPlugin,
     },
-    // @ts-expect-error ignore errors
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
