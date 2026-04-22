@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import {
   CloudfrontCdnTemplateStack,
-} from '../lib/cloudfront-cdn-template-stack';
+} from '../lib/cloudfront-cdn-template-stack.js';
 
 const app = new cdk.App();
 

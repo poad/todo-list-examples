@@ -10,12 +10,12 @@ export function ListItem(props: ListItemProps) {
     <div key={`${props.id}-item-container`}>
       <label key={`${props.id}-label`} className="w-20 hover:cursor-grab">
         <input
+          key={`${props.id}-input`}
           type="checkbox"
           {...props}
           onChange={(e) => {
             props.onChange?.(props.id, e.target.checked);
           }}
-          key={`${props.id}-input`}
           className="mr-2"
         />
         {props.label}

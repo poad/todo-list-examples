@@ -1,50 +1,34 @@
-// @ts-check
-
 import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import solid from "eslint-plugin-solid/configs/typescript";
 import tseslint from 'typescript-eslint';
-
 export default defineConfig(
   {
     ignores: [
       '**/*.d.ts',
-      '*.{js,jsx,cjs,mjs}',
+      '*.{js,jsx}',
+      'src/tsconfig.json',
+      'src/stories',
       '**/*.css',
       'node_modules/**/*',
-      '.next',
       'out',
-      '.storybook',
-      'cdk',
-      '../nextjs',
-      '../nextjs/cdk',
+      'cdk.out',
       'dist',
+      '../../solidjs',
+      '../../solidjs/cdk',
+      '../',
     ],
   },
   eslint.configs.recommended,
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
   {
-    files: ['src/**/*.{jsx,ts,tsx}'],
-    ...solid,
+    files: ['src/*.ts', 'src/**/*.ts'],
     plugins: {
       '@stylistic': stylistic,
     },
-    languageOptions: {
-      globals: {
-        Atomics: 'readonly',
-        SharedArrayBuffer: 'readonly'
-      },
-      parser: tseslint.parser,
-    },
-    linterOptions: {
-      noInlineConfig: true,
-      reportUnusedDisableDirectives: true,
-    },
     rules: {
-      'react/display-name': 'off',
-      '@stylistic/semi': ['error', 'always'],
+      '@stylistic/semi': 'error',
       '@stylistic/indent': ['error', 2],
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
       '@stylistic/arrow-parens': ['error', 'always'],

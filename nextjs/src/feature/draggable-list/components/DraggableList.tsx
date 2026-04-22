@@ -18,7 +18,7 @@ export function DraggableList<T>({
 }) {
   const moveItem = useCallback((dragIndex: number, hoverIndex: number) => {
     onChange?.(dragIndex, hoverIndex);
-  }, []);
+  }, [onChange]);
 
   return (
     <>

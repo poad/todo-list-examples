@@ -1,9 +1,7 @@
-// @ts-check
-
 import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import nextPlugin from '@next/eslint-plugin-next';
+import solid from "eslint-plugin-solid/configs/typescript";
 import tseslint from 'typescript-eslint';
 
 export default defineConfig(
@@ -13,12 +11,13 @@ export default defineConfig(
       '*.{js,jsx,cjs,mjs}',
       '**/*.css',
       'node_modules/**/*',
-      '**/.next',
-      '**/out',
+      '.next',
+      'out',
       '.storybook',
       'cdk',
-      '../solidjs',
-      '../solidjs/cdk',
+      '../nextjs',
+      '../nextjs/cdk',
+      'dist',
     ],
   },
   eslint.configs.recommended,
@@ -26,16 +25,22 @@ export default defineConfig(
   ...tseslint.configs.stylistic,
   {
     files: ['src/**/*.{jsx,ts,tsx}'],
+    ...solid,
     plugins: {
       '@stylistic': stylistic,
-      '@next/next': nextPlugin,
+    },
+    languageOptions: {
+      globals: {
+        Atomics: 'readonly',
+        SharedArrayBuffer: 'readonly'
+      },
+      parser: tseslint.parser,
+    },
+    linterOptions: {
+      noInlineConfig: true,
+      reportUnusedDisableDirectives: true,
     },
     rules: {
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs['core-web-vitals'].rules,
-      '@next/next/no-duplicate-head': 'off',
-      '@next/next/no-img-element': 'error',
-      '@next/next/no-page-custom-font': 'off',
       'react/display-name': 'off',
       '@stylistic/semi': ['error', 'always'],
       '@stylistic/indent': ['error', 2],
