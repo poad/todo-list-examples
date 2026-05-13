@@ -4,6 +4,11 @@ packages:
   - ./solidjs
   - ./solidjs/cdk
 
+allowBuilds:
+  esbuild: false
+  sharp: false
+  unrs-resolver: false
+
 minimumReleaseAge: 10080 # 7 days in minutes
 minimumReleaseAgeExclude:
   - '@typescript-eslint/utils@8.59.0'
@@ -23,14 +28,16 @@ minimumReleaseAgeExclude:
   - '@rollup/*'
   - rollup@4.60.2
 
-  - 'eslint-config-next@16.2.4'
-  - '@next/eslint-plugin-next@16.2.4'
-  - 'next@16.2.4'
+  - 'eslint-config-next@16.2.6'
+  - '@next/eslint-plugin-next@16.2.6'
+  - 'next@16.2.6'
   - '@next/*'
+  - elliptic@6.6.2
 
 overrides:
   brace-expansion@<1.1.13: '>=1.1.13'
   brace-expansion@>=2.0.0 <2.0.3: '>=2.0.3'
+  elliptic@<=6.6.1: ^6.6.2
   eslint-import-resolver-typescript: '>=4'
   handlebars@>=4.0.0 <4.7.9: '>=4.7.9'
   handlebars@>=4.0.0 <=4.7.8: '>=4.7.9'

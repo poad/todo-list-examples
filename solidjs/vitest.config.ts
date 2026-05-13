@@ -7,11 +7,11 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./setupVitest.ts'],
     globals: true,
-    // solid needs to be inline to work around
-    // a resolution issue in vitest:
-    deps: {
-      inline: [/solid-js/],
-    },
+    // // solid needs to be inline to work around
+    // // a resolution issue in vitest:
+    // deps: {
+    //   inline: [/solid-js/],
+    // },
     isolate: false,
   },
   build: {
