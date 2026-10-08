@@ -1,8 +1,8 @@
 packages:
-  - ./nextjs
-  - ./nextjs/cdk
-  - ./solidjs
-  - ./solidjs/cdk
+  - nextjs
+  - nextjs/cdk
+  - solidjs
+  - solidjs/cdk
 
 allowBuilds:
   esbuild: false
@@ -12,24 +12,23 @@ allowBuilds:
 minimumReleaseAge: 10080 # 7 days in minutes
 
 minimumReleaseAgeExclude:
-  - pnpm@12.3.4
+  - pnpm@12.10.1
 
-  - postcss@8.5.10
-  - form-data@4.0.6
-  - sharp@0.35.0
-  - brace-expansion@5.0.8 || 5.0.9
-  - js-yaml@4.3.1
+  - '@next/bundle-analyzer@16.4.0'
+  - '@next/env@16.4.0'
+  - '@next/swc-darwin-arm64@16.4.0'
+  - '@next/swc-darwin-x64@16.4.0'
+  - '@next/swc-linux-arm64-gnu@16.4.0'
+  - '@next/swc-linux-arm64-musl@16.4.0'
+  - '@next/swc-linux-x64-gnu@16.4.0'
+  - '@next/swc-linux-x64-musl@16.4.0'
+  - '@next/swc-win32-arm64-msvc@16.4.0'
+  - '@next/swc-win32-x64-msvc@16.4.0'
+  - next@16.4.0
 
 overrides:
-  brace-expansion@<=5.0.7: ^5.0.8
-  brace-expansion@>=4.0.0 <5.0.9: ^5.0.9
-  eslint-import-resolver-typescript: '^4.4.5'
-  form-data@>=4.0.0 <4.0.6: ^4.0.6
-  js-yaml@>=4.0.0 <4.3.1: ^4.3.1
-  postcss@<8.5.10: ^8.5.10
+  postcss-selector-parser@<7.1.6: ^7.1.6
   semver: '>=7'
-  sharp@<0.35.0: ^0.35.0
+  seroval@<=1.6.2: ^1.6.3
 
 trustPolicy: no-downgrade
-trustPolicyExclude:
-  - ua-parser-js@1.0.41
