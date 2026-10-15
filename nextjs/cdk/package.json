@@ -15,19 +15,19 @@
     "@eslint/eslintrc": "^3.3.7",
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@types/node": "^24.19.1",
-    "aws-cdk": "^2.1144.0",
+    "@types/node": "^26.6.4",
+    "aws-cdk": "^2.1145.0",
     "eslint": "^10.12.0",
     "eslint-plugin-import": "^2.32.0",
     "jiti": "^2.7.0",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.71.1",
-    "vite": "^8.3.3",
-    "vitest": "^4.1.11"
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.272.0",
+    "aws-cdk-lib": "^2.273.0",
     "constructs": "^10.8.1"
   }
 }
