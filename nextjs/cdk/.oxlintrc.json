@@ -9,10 +9,7 @@
     "node_modules/**/*",
     "out",
     "cdk.out",
-    "dist",
-    "../../solidjs",
-    "../../solidjs/cdk",
-    "../"
+    "dist"
   ],
   "plugins": ["typescript"],
   "categories": {

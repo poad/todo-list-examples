@@ -30,7 +30,7 @@ export function DraggableItem({
   index,
   moveCard,
 }: DraggableItemProps) {
-  const ref = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
   const [{ handlerId }, drop] = useDrop<
     DragItem,
     // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
@@ -44,7 +44,7 @@ export function DraggableItem({
       };
     },
     hover(item: DragItem, monitor) {
-      if (!ref.current) {
+      if (!cardRef.current) {
         return;
       }
       const dragIndex = item.index;
@@ -56,7 +56,7 @@ export function DraggableItem({
       }
 
       // Determine rectangle on screen
-      const hoverBoundingRect = ref.current?.getBoundingClientRect();
+      const hoverBoundingRect = cardRef.current?.getBoundingClientRect();
 
       // Get vertical middle
       const hoverMiddleY =
@@ -104,11 +104,12 @@ export function DraggableItem({
   });
 
   const opacity = isDragging ? 0 : 1;
-  drag(drop(ref));
+  // oxlint-disable
+  drag(drop(cardRef));
   return (
     <div
       key={id}
-      ref={ref}
+      ref={cardRef}
       style={{ ...style, opacity }}
       data-handler-id={handlerId}
     >

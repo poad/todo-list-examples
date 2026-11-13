@@ -8,11 +8,11 @@
     "lint": "pnpm -r --if-present --parallel lint"
   },
   "devDependencies": {
-    "oxlint": "*",
-    "oxfmt": "*",
+    "oxfmt": "^0.77.0",
+    "oxlint": "^1.92.0",
     "typescript": "^6.0.3",
-    "vite": "^8.3.5",
-    "vitest": "^5.0.5"
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
   },
   "devEngines": {
     "packageManager": {
@@ -22,7 +22,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "^24.22.2",
+      "version": "^24.22.3",
       "onFail": "download"
     }
   }

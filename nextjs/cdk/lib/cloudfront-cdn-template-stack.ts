@@ -76,7 +76,8 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       httpVersion: cloudfront.HttpVersion.HTTP2_AND_3,
     });
 
-		new deployment.BucketDeployment(this, "DeployWebsite", {
+		/* oxlint-disable no-unused-vars */
+const bucketDeployment = new deployment.BucketDeployment(this, "DeployWebsite", {
 			sources: [deployment.Source.asset(`${process.cwd()}/../out`)],
 			destinationBucket: s3bucket,
 			destinationKeyPrefix: "/",
@@ -86,7 +87,8 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
 			role: deployRole,
 		});
 
-    new cdk.CfnOutput(this, 'AccessURLOutput', {
+    /* oxlint-disable no-unused-vars */
+const cfnOutput = new cdk.CfnOutput(this, 'AccessURLOutput', {
       value: `https://${cf.distributionDomainName}`,
     });
   }

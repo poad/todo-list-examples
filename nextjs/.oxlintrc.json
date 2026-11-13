@@ -8,11 +8,13 @@
     ".next",
     "out",
     ".storybook",
-    "cdk",
-    "../solidjs",
-    "../solidjs/cdk"
+    "cdk"
   ],
   "plugins": ["typescript", "react", "promise"],
+  "rules": {
+    "react-in-jsx-scope": "off",
+    "no-underscore-dangle": ["error", {"allow": ["^_"]}]
+  },
   "categories": {
     "correctness": "error",
     "suspicious": "warn"
