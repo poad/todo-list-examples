@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "eslint",
-    "lint-fix": "eslint --fix"
+    "lint": "oxlint",
+    "lint-fix": "oxlint --fix"
   },
   "dependencies": {
     "dnd-core": "^16.0.1",
@@ -21,25 +21,15 @@
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
-    "@eslint-react/eslint-plugin": "^5.28.8",
-    "@eslint/eslintrc": "^3.3.7",
-    "@eslint/js": "^10.0.1",
-    "@next/eslint-plugin-next": "^16.4.3",
-    "@stylistic/eslint-plugin": "^5.10.0",
-    "@tailwindcss/postcss": "4.3.3",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "eslint": "^10.13.0",
-    "eslint-config-next": "^16.4.3",
-    "eslint-import-resolver-typescript": "^4.4.5",
-    "eslint-plugin-import-x": "^4.17.1",
-    "eslint-plugin-promise": "^7.3.0",
-    "jiti": "^2.7.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "oxlint": "*",
+    "oxfmt": "*",
     "postcss": "^8.5.32",
     "react-icons": "^5.7.0",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.72.1"
+    "typescript": "^6.0.3"
   }
 }

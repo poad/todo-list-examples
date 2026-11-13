@@ -8,19 +8,16 @@
     "watch": "tsc -w",
     "test": "vitest --run",
     "cdk": "cdk",
-    "lint": "eslint './{bin,lib}/**/*.ts'",
-    "lint-fix": "eslint --fix './{bin,lib}/**/*.ts'"
+    "lint": "oxlint './{bin,lib}/**/*.ts'",
+    "lint-fix": "oxlint --fix './{bin,lib}/**/*.ts'"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^26.6.5",
     "aws-cdk": "^2.1146.1",
-    "eslint": "^10.13.0",
-    "eslint-plugin-import": "^2.32.0",
-    "jiti": "^2.7.0",
+    "oxlint": "*",
+    "oxfmt": "*",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.72.1",
     "vite": "^8.3.5",
     "vitest": "^5.0.5"
   },

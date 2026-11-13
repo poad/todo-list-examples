@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "ignorePatterns": [
+    "**/*.d.ts",
+    "*.{js,jsx,cjs,mjs}",
+    "**/*.css",
+    "node_modules/**/*",
+    ".next",
+    "out",
+    ".storybook",
+    "cdk",
+    "../nextjs",
+    "../nextjs/cdk",
+    "dist"
+  ],
+  "plugins": ["typescript"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  }
+}
